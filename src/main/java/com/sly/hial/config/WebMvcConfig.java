@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.sly.hial.interceptor.LoginInterceptor;
-import com.sly.hial.interceptor.PermissionAccessInterceptor;
+import com.sly.hial.interceptor.AuthPermissionInterceptor;
 
 /**
  * 默认首页配置
@@ -21,7 +21,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	@Autowired
 	private LoginInterceptor loginInterceptor;
 	@Autowired
-	private PermissionAccessInterceptor permissionAccessInterceptor;
+	private AuthPermissionInterceptor permissionAccessInterceptor;
 
 	/**
 	 * 注册登录拦截器

@@ -4,10 +4,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Component;
+import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.alibaba.fastjson.JSON;
+import com.sly.hial.annotation.LoginPermission;
 import com.sly.hial.business.system.model.User;
 import com.sly.hial.common.constant.CommonConstant;
 import com.sly.hial.common.constant.ResultStatus;
@@ -43,9 +45,14 @@ public class LoginInterceptor implements HandlerInterceptor {
 		String path = request.getContextPath();
 		String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
 		
-		if(true) {
+		HandlerMethod handlerMethod = (HandlerMethod) handler;
+		LoginPermission loginPermission = handlerMethod.getMethodAnnotation(LoginPermission.class);
+		
+		if(loginPermission == null) {
+			// 没有加登录拦截注解 放行
 			return true;
 		}
+		
 		//未登录
 		String header = request.getHeader("X-Requested-With");  
 		boolean isAjax = "XMLHttpRequest".equals(header) ? true:false;

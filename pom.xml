@@ -76,6 +76,21 @@
 			<artifactId>feign-form-spring</artifactId>
 			<version>3.3.0</version>
 		</dependency>
+		
+		<!-- 常用工具jar包依赖 -->
+		<dependency>
+			<groupId>commons-net</groupId>
+			<artifactId>commons-net</artifactId>
+			<version>3.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+		</dependency>
 
 		<!-- springboot相关依赖 -->
 		<dependency>

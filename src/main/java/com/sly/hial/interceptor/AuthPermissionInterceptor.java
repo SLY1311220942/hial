@@ -17,9 +17,9 @@ import org.springframework.web.servlet.ModelAndView;
  * @time 2019年3月9日
  */
 @Component
-public class PermissionAccessInterceptor implements HandlerInterceptor {
+public class AuthPermissionInterceptor implements HandlerInterceptor {
 	@SuppressWarnings("unused")
-	private static final Logger logger = LoggerFactory.getLogger(PermissionAccessInterceptor.class);
+	private static final Logger logger = LoggerFactory.getLogger(AuthPermissionInterceptor.class);
 
 	//@Autowired
 	//private FuncService funcService;
