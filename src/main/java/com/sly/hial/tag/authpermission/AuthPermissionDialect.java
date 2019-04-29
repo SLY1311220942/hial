@@ -1,4 +1,4 @@
-package com.sly.hial.tag;
+package com.sly.hial.tag.authpermission;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -17,10 +17,10 @@ import org.thymeleaf.standard.StandardDialect;
 @Component
 public class AuthPermissionDialect extends AbstractProcessorDialect implements IProcessorDialect {
 
-	private static final String PREFIX = "mt";
+	private static final String PREFIX = "AuthPermission";
 
 	public AuthPermissionDialect() {
-		super("My tag", PREFIX, StandardDialect.PROCESSOR_PRECEDENCE);
+		super("apt", PREFIX, StandardDialect.PROCESSOR_PRECEDENCE);
 	}
 
 	@Override

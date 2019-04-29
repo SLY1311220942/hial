@@ -1,4 +1,4 @@
-package com.sly.hial.tag;
+package com.sly.hial.tag.authpermission;
 
 import org.thymeleaf.context.ITemplateContext;
 import org.thymeleaf.model.IAttribute;
@@ -14,7 +14,7 @@ import org.thymeleaf.templatemode.TemplateMode;
  */
 public class AuthPermissionProcessor extends AbstractElementTagProcessor {
 	private static final int PRECEDENCE = 10000;
-	private static final String TAG_NAME = "MyTag";
+	private static final String TAG_NAME = "auth";
 	
 	public AuthPermissionProcessor(String dialectPrefix) {
 		super(
@@ -25,8 +25,8 @@ public class AuthPermissionProcessor extends AbstractElementTagProcessor {
 				// 标签名称：匹配此名称的特定标签
 				TAG_NAME,
 				// 没有要应用于标签名称的前缀
-				false,
-				// 无属性名称：将通过标签名称匹配
+				true,
+				// true有属性名称：将通过标签名称和属性名称匹配，false无属性名称：将通过标签名称匹配
 				null,
 				// 没有要应用于属性名称的前缀
 				false,
