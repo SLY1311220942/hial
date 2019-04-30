@@ -13,7 +13,7 @@ import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 
-import com.sly.hial.plugins.ik.IKAnalyzerLucene7;
+import com.sly.hial.plugins.ik.IkAnalyzerLucene7;
 
 /**
  * 索引文件
@@ -37,7 +37,7 @@ public class Indexer {
 		// 得到索引所在目录的路径
 		Directory directory = FSDirectory.open(Paths.get(indexDir));
 		// ik分词器
-		IKAnalyzerLucene7 analyzer = new IKAnalyzerLucene7();
+		IkAnalyzerLucene7 analyzer = new IkAnalyzerLucene7();
 		// Analyzer analyzer = new IKAnalyzer();
 		// 保存用于创建IndexWriter的所有配置。
 		IndexWriterConfig iwConfig = new IndexWriterConfig(analyzer);

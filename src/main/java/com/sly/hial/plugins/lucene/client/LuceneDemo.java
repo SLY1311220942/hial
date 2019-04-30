@@ -7,7 +7,7 @@ import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 
-import com.sly.hial.plugins.ik.IKAnalyzerLucene7;
+import com.sly.hial.plugins.ik.IkAnalyzerLucene7;
 import com.sly.hial.plugins.lucene.index.Indexer;
 import com.sly.hial.plugins.lucene.search.Searcher;
 
@@ -85,7 +85,7 @@ public class LuceneDemo {
 	 * @time 2019年4月18日
 	 */
 	public static void analyzerTest() throws IOException {
-		Analyzer analyzer = new IKAnalyzerLucene7(true);
+		Analyzer analyzer = new IkAnalyzerLucene7(true);
 		// Analyzer analyzer = new StandardAnalyzer();
 
 		TokenStream tokenStream = analyzer.tokenStream("content", "后得到的");

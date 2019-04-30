@@ -1,10 +1,11 @@
 package com.sly.hial.business.system.mapper;
 
 /**
- * 码表mapper
+ * 角色功能关系mapper
  * @author sly
  * @time 2019年4月30日
  */
-public interface DicCodeMapper {
+public interface RoleFuncMapper {
 
 }
+

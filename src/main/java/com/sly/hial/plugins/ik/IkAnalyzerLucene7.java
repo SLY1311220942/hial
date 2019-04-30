@@ -8,14 +8,14 @@ import org.apache.lucene.analysis.Analyzer;
  * @author sly
  * @time 2019年4月18日
  */
-public class IKAnalyzerLucene7 extends Analyzer {
+public class IkAnalyzerLucene7 extends Analyzer {
 	private boolean useSmart = false;
 
-	public IKAnalyzerLucene7() {
+	public IkAnalyzerLucene7() {
 		this(false);
 	}
 
-	public IKAnalyzerLucene7(boolean useSmart) {
+	public IkAnalyzerLucene7(boolean useSmart) {
 		super();
 		this.useSmart = useSmart;
 	}
@@ -30,7 +30,7 @@ public class IKAnalyzerLucene7 extends Analyzer {
 
 	@Override
 	protected TokenStreamComponents createComponents(String fieldName) {
-		IKTokenizerLucene7 tk = new IKTokenizerLucene7(this.useSmart);
+		IkTokenizerLucene7 tk = new IkTokenizerLucene7(this.useSmart);
 		return new TokenStreamComponents(tk);
 	}
 

@@ -6,6 +6,11 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ * 索引controller
+ * @author sly
+ * @time 2019年4月30日
+ */
 @Controller
 @RequestMapping("/index")
 public class IndexController {

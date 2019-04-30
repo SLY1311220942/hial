@@ -15,7 +15,7 @@ import org.wltea.analyzer.core.Lexeme;
  * @author sly
  * @time 2019年4月18日
  */
-public final class IKTokenizerLucene7 extends Tokenizer {
+public final class IkTokenizerLucene7 extends Tokenizer {
 
 	/** IK分词器实现 */
 	private IKSegmenter iKImplement;
@@ -34,7 +34,7 @@ public final class IKTokenizerLucene7 extends Tokenizer {
 	 * @author sly
 	 * @time 2019年4月18日
 	 */
-	public IKTokenizerLucene7(boolean useSmart) {
+	public IkTokenizerLucene7(boolean useSmart) {
 		super();
 		offsetAtt = addAttribute(OffsetAttribute.class);
 		termAtt = addAttribute(CharTermAttribute.class);

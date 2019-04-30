@@ -13,7 +13,7 @@ import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 
-import com.sly.hial.plugins.ik.IKAnalyzerLucene7;
+import com.sly.hial.plugins.ik.IkAnalyzerLucene7;
 
 /**
  * 查询文件
@@ -31,7 +31,7 @@ public class Searcher {
 		// 建立索引查询器
 		IndexSearcher is = new IndexSearcher(reader);
 		// 实例化分析器
-		IKAnalyzerLucene7 analyzer = new IKAnalyzerLucene7();
+		IkAnalyzerLucene7 analyzer = new IkAnalyzerLucene7();
 		// Analyzer analyzer = new IKAnalyzer(true);
 		// Analyzer analyzer = new StandardAnalyzer();
 		// 建立查询解析器:第一个参数是要查询的字段;第二个参数是分析器Analyzer

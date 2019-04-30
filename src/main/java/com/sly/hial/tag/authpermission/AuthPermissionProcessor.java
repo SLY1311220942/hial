@@ -42,7 +42,7 @@ public class AuthPermissionProcessor extends AbstractElementTagProcessor {
 		
 		IAttribute url = tag.getAttribute("url");
 		System.out.println("匹配上:" + url.getValue());
-		if (url.getValue().equals("/haha")) {
+		if ("/haha".equals(url.getValue())) {
 			structureHandler.removeElement();
 		} else {
 			structureHandler.removeTags();
