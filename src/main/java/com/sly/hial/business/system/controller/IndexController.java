@@ -23,8 +23,8 @@ public class IndexController {
 	 * @author sly
 	 * @time 2019年4月20日
 	 */
-	@RequestMapping("/home")
-	public String home(HttpServletRequest request, HttpServletResponse response) {
-		return "pages/system/home.html";
+	@RequestMapping("/systemHome")
+	public String systemHome(HttpServletRequest request, HttpServletResponse response) {
+		return "pages/system/systemHome.html";
 	}
 }
